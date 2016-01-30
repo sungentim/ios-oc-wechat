@@ -16,6 +16,7 @@
 		F74982E11C5C626E0004C392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74982DF1C5C626E0004C392 /* LaunchScreen.storyboard */; };
 		F74982EC1C5C626E0004C392 /* iOS_oc_wechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982EB1C5C626E0004C392 /* iOS_oc_wechatTests.m */; };
 		F74982F71C5C626E0004C392 /* iOS_oc_wechatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982F61C5C626E0004C392 /* iOS_oc_wechatUITests.m */; };
+		F74983091C5C67C30004C392 /* SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74983081C5C67C30004C392 /* SWBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		F74982F21C5C626E0004C392 /* iOS-oc-wechatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-oc-wechatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74982F61C5C626E0004C392 /* iOS_oc_wechatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_oc_wechatUITests.m; sourceTree = "<group>"; };
 		F74982F81C5C626E0004C392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74983071C5C67C30004C392 /* SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseViewController.h; sourceTree = "<group>"; };
+		F74983081C5C67C30004C392 /* SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseViewController.m; sourceTree = "<group>"; };
+		F749830A1C5C68670004C392 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				F74982E21C5C626E0004C392 /* Info.plist */,
 				F74982DA1C5C626E0004C392 /* iOS_oc_wechat.xcdatamodeld */,
 				F74982CE1C5C626E0004C392 /* Supporting Files */,
+				F74983071C5C67C30004C392 /* SWBaseViewController.h */,
+				F74983081C5C67C30004C392 /* SWBaseViewController.m */,
 			);
 			path = "iOS-oc-wechat";
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F74982CF1C5C626E0004C392 /* main.m */,
+				F749830A1C5C68670004C392 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +284,7 @@
 				F74982DC1C5C626E0004C392 /* iOS_oc_wechat.xcdatamodeld in Sources */,
 				F74982D31C5C626E0004C392 /* AppDelegate.m in Sources */,
 				F74982D01C5C626E0004C392 /* main.m in Sources */,
+				F74983091C5C67C30004C392 /* SWBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
