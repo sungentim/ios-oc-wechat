@@ -15,3 +15,18 @@
 #endif /* PrefixHeader_pch */
 
 #import "SWBaseViewController.h"
+
+
+/**
+ *定义常用宏
+ *NSLog
+ *release模式通常会定义 __OPTIMIZE__，当然debug模式不会
+ **/
+// Debug模式下允许打印，Release模式打印函数无效
+#ifndef __OPTIMIZE__
+# define NSLog(...) NSLog(__VA_ARGS__)
+# define NSLogE(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+# define NSLog(...) {}
+# define NSLogE(...) {}
+#endif
