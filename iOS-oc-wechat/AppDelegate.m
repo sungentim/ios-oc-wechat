@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SWHomeTabbarController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +20,11 @@
     
     //欢迎页面延长5秒消失
     [NSThread sleepForTimeInterval:5.0];
+    
+    //  tabbarController
+    SWHomeTabbarController *homeTabbarCtrl = [[SWHomeTabbarController alloc] init];
+    self.window.rootViewController = homeTabbarCtrl;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

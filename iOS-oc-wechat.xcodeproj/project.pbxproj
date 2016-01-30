@@ -18,6 +18,12 @@
 		F74982EC1C5C626E0004C392 /* iOS_oc_wechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982EB1C5C626E0004C392 /* iOS_oc_wechatTests.m */; };
 		F74982F71C5C626E0004C392 /* iOS_oc_wechatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982F61C5C626E0004C392 /* iOS_oc_wechatUITests.m */; };
 		F74983091C5C67C30004C392 /* SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74983081C5C67C30004C392 /* SWBaseViewController.m */; };
+		F749830D1C5C88B40004C392 /* SWHomeTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749830C1C5C88B40004C392 /* SWHomeTabbarController.m */; };
+		F74983141C5C89E00004C392 /* SWChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74983131C5C89E00004C392 /* SWChatViewController.m */; };
+		F74983171C5C89FA0004C392 /* SWConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74983161C5C89FA0004C392 /* SWConsultViewController.m */; };
+		F749831A1C5C8A140004C392 /* SWDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74983191C5C8A140004C392 /* SWDiscoveryViewController.m */; };
+		F749831D1C5C8A2C0004C392 /* SWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749831C1C5C8A2C0004C392 /* SWMeViewController.m */; };
+		F74983201C5C8BD10004C392 /* SWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749831F1C5C8BD10004C392 /* SWBaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,18 @@
 		F74983071C5C67C30004C392 /* SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseViewController.h; sourceTree = "<group>"; };
 		F74983081C5C67C30004C392 /* SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseViewController.m; sourceTree = "<group>"; };
 		F749830A1C5C68670004C392 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F749830B1C5C88B40004C392 /* SWHomeTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeTabbarController.h; sourceTree = "<group>"; };
+		F749830C1C5C88B40004C392 /* SWHomeTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeTabbarController.m; sourceTree = "<group>"; };
+		F74983121C5C89E00004C392 /* SWChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWChatViewController.h; sourceTree = "<group>"; };
+		F74983131C5C89E00004C392 /* SWChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWChatViewController.m; sourceTree = "<group>"; };
+		F74983151C5C89FA0004C392 /* SWConsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWConsultViewController.h; sourceTree = "<group>"; };
+		F74983161C5C89FA0004C392 /* SWConsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWConsultViewController.m; sourceTree = "<group>"; };
+		F74983181C5C8A140004C392 /* SWDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWDiscoveryViewController.h; sourceTree = "<group>"; };
+		F74983191C5C8A140004C392 /* SWDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWDiscoveryViewController.m; sourceTree = "<group>"; };
+		F749831B1C5C8A2C0004C392 /* SWMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWMeViewController.h; sourceTree = "<group>"; };
+		F749831C1C5C8A2C0004C392 /* SWMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWMeViewController.m; sourceTree = "<group>"; };
+		F749831E1C5C8BD10004C392 /* SWBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseNavigationController.h; sourceTree = "<group>"; };
+		F749831F1C5C8BD10004C392 /* SWBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +149,10 @@
 		F74982CD1C5C626E0004C392 /* iOS-oc-wechat */ = {
 			isa = PBXGroup;
 			children = (
+				F74983111C5C89650004C392 /* 我 */,
+				F74983101C5C895C0004C392 /* 发现 */,
+				F749830F1C5C89520004C392 /* 通信录 */,
+				F749830E1C5C89380004C392 /* 微信 */,
 				F74982D11C5C626E0004C392 /* AppDelegate.h */,
 				F74982D21C5C626E0004C392 /* AppDelegate.m */,
 				F74982D41C5C626E0004C392 /* ViewController.h */,
@@ -143,6 +165,10 @@
 				F74982CE1C5C626E0004C392 /* Supporting Files */,
 				F74983071C5C67C30004C392 /* SWBaseViewController.h */,
 				F74983081C5C67C30004C392 /* SWBaseViewController.m */,
+				F749831E1C5C8BD10004C392 /* SWBaseNavigationController.h */,
+				F749831F1C5C8BD10004C392 /* SWBaseNavigationController.m */,
+				F749830B1C5C88B40004C392 /* SWHomeTabbarController.h */,
+				F749830C1C5C88B40004C392 /* SWHomeTabbarController.m */,
 			);
 			path = "iOS-oc-wechat";
 			sourceTree = "<group>";
@@ -172,6 +198,42 @@
 				F74982F81C5C626E0004C392 /* Info.plist */,
 			);
 			path = "iOS-oc-wechatUITests";
+			sourceTree = "<group>";
+		};
+		F749830E1C5C89380004C392 /* 微信 */ = {
+			isa = PBXGroup;
+			children = (
+				F74983121C5C89E00004C392 /* SWChatViewController.h */,
+				F74983131C5C89E00004C392 /* SWChatViewController.m */,
+			);
+			name = "微信";
+			sourceTree = "<group>";
+		};
+		F749830F1C5C89520004C392 /* 通信录 */ = {
+			isa = PBXGroup;
+			children = (
+				F74983151C5C89FA0004C392 /* SWConsultViewController.h */,
+				F74983161C5C89FA0004C392 /* SWConsultViewController.m */,
+			);
+			name = "通信录";
+			sourceTree = "<group>";
+		};
+		F74983101C5C895C0004C392 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				F74983181C5C8A140004C392 /* SWDiscoveryViewController.h */,
+				F74983191C5C8A140004C392 /* SWDiscoveryViewController.m */,
+			);
+			name = "发现";
+			sourceTree = "<group>";
+		};
+		F74983111C5C89650004C392 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				F749831B1C5C8A2C0004C392 /* SWMeViewController.h */,
+				F749831C1C5C8A2C0004C392 /* SWMeViewController.m */,
+			);
+			name = "我";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,9 +417,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F749831A1C5C8A140004C392 /* SWDiscoveryViewController.m in Sources */,
+				F749830D1C5C88B40004C392 /* SWHomeTabbarController.m in Sources */,
+				F749831D1C5C8A2C0004C392 /* SWMeViewController.m in Sources */,
 				F74982D61C5C626E0004C392 /* ViewController.m in Sources */,
 				F74982DC1C5C626E0004C392 /* iOS_oc_wechat.xcdatamodeld in Sources */,
+				F74983141C5C89E00004C392 /* SWChatViewController.m in Sources */,
 				F74982D31C5C626E0004C392 /* AppDelegate.m in Sources */,
+				F74983171C5C89FA0004C392 /* SWConsultViewController.m in Sources */,
+				F74983201C5C8BD10004C392 /* SWBaseNavigationController.m in Sources */,
 				F74982D01C5C626E0004C392 /* main.m in Sources */,
 				F74983091C5C67C30004C392 /* SWBaseViewController.m in Sources */,
 			);
