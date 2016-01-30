@@ -16,6 +16,10 @@
 
 #import "SWBaseViewController.h"
 
+#define kkScreenSize   ([UIScreen mainScreen].bounds.size)
+#define kkScreenWidth  (kkScreenSize.width)
+#define kkScreenHeight (kkScreenSize.height)
+#define kkScrreenRate (kkScreenWidth/320)
 
 /**
  *定义常用宏
