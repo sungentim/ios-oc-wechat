@@ -7,13 +7,17 @@
 //
 
 #import "SWBaseViewController.h"
-
+#import "UIViewController+TXCategory.h"
 @implementation SWBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor grayColor];
+    [self i_setNavigationBarBackColor:[UIColor blackColor]];
+    [self i_setTitleText:self.title Color:[UIColor whiteColor] font:[UIFont systemFontOfSize:17]];
+
+    
+    self.view.backgroundColor = [UIColor colorWithHexString:@"f2f2f2"];
     NSLogE(@"%@", @"测试打印Debug");
 }
 
