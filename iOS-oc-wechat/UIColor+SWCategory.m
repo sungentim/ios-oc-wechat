@@ -1,9 +1,9 @@
 //
-//  UIColor+TXCategory.m
+//  UIColor+SWCategory.m
 //  appDoctor
 //
-//  Created by TX-009 on 14-10-23.
-//  Copyright (c) 2014年 TX-009. All rights reserved.
+//  Created by wangsen on 14-10-23.
+//  Copyright (c) 2014年 wangsen. All rights reserved.
 //
 
 #import "UIColor+SWCategory.h"
