@@ -12,7 +12,7 @@
 #pragma mark -alertView弹出提示
 - (void)messageBox:(NSString *)msg;
 #pragma mark - 导航栏
-- (void)i_setNavigationBarBackColor:(UIColor *)color;
++ (void)i_setNavigationBarBackColor:(UIColor *)color;
 #pragma mark -设置导航栏左侧按钮
 - (void)i_setLeftBarButtonWithImage:(UIImage *)image target:(id)target action:(SEL)action;
 - (void)i_setLeftBarButtonWithImage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action;

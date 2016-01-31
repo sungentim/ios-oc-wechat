@@ -17,6 +17,7 @@
 #import "NSString+TXCategory.h"
 #import "UIView+SWLayout.h"
 #import "UIColor+SWCategory.h"
+#import "UIImage+SWCategory.h"
 #import "SWBaseViewController.h"
 
 #define kkScreenSize   ([UIScreen mainScreen].bounds.size)

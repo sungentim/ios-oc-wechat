@@ -23,10 +23,10 @@
 #pragma mark - 导航栏
 /**
  *  设置导航栏的背景颜色(全局)
- *
+ *  修改UINavigationBar的背景颜色(iOS7以上)
  *  @param color 导航栏背景颜色
  */
-- (void)i_setNavigationBarBackColor:(UIColor *)color
++ (void)i_setNavigationBarBackColor:(UIColor *)color
 {
     [[UINavigationBar appearance] setBarTintColor:color];
 }

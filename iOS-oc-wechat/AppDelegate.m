@@ -18,6 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 设置全局导航栏的背景颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     //欢迎页面延长5秒消失
     [NSThread sleepForTimeInterval:5.0];
     
