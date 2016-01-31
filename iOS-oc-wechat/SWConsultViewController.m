@@ -7,7 +7,7 @@
 //
 
 #import "SWConsultViewController.h"
-#define ktitleSection @[@"🔍",@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
+#define ktitleSection @[@"",@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
 @interface SWConsultViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
     UISearchBar *_searchBar;
@@ -109,10 +109,15 @@
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
         }
+        case 2:{
+            cell.imageView.image = @[[UIImage imageNamed:@"MyAlbum"]][0];
+            cell.textLabel.text = @[@"星标朋友"][0];
+            break;
+        }
         default:
         {
             cell.imageView.image = @[[UIImage imageNamed:@"MyAlbum"]][0];
-            cell.textLabel.text = @[@"相册"][0];
+            cell.textLabel.text = @[@"联系人"][0];
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
         }

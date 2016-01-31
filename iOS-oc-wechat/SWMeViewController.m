@@ -79,9 +79,26 @@
             [tableCell.contentView addSubview:qrCode];
         }];
     }else{
-        NSInteger array_index = indexPath.section + indexPath.row - 1;
-        cell.imageView.image = @[[UIImage imageNamed:@"MyAlbum"],[UIImage imageNamed:@"MyFavorites"],[UIImage imageNamed:@"MorePurse"],[UIImage imageNamed:@"MyCardPackage"],[UIImage imageNamed:@"MyFace"],[UIImage imageNamed:@"MySetting"]][array_index];
-        cell.textLabel.text = @[@"相册", @"收藏", @"钱包", @"卡包", @"表情", @"设置"][array_index];
+        switch (indexPath.section) {
+            case 1:
+            {
+                cell.imageView.image = @[[UIImage imageNamed:@"MyAlbum"],[UIImage imageNamed:@"MyFavorites"],[UIImage imageNamed:@"MorePurse"],[UIImage imageNamed:@"MyCardPackage"]][indexPath.row];
+                cell.textLabel.text = @[@"相册", @"收藏", @"钱包", @"卡包"][indexPath.row];
+            }
+                break;
+            case 2:{
+                cell.imageView.image = [UIImage imageNamed:@"MyFace"];
+                cell.textLabel.text = @"表情";
+                break;
+            }
+            case 3:{
+                cell.imageView.image = [UIImage imageNamed:@"MySetting"];
+                cell.textLabel.text = @"设置";
+                break;
+            }
+            default:
+                break;
+        }
     }
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
