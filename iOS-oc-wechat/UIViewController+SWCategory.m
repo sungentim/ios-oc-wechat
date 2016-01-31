@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 wangsen. All rights reserved.
 //
 
-#import "UIViewController+TXCategory.h"
+#import "UIViewController+SWCategory.h"
 @implementation UIViewController (TXCategory)
 
 //alertView弹出提示

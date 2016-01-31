@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		368178831C5D0380009EAFF9 /* UIView+SWLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178821C5D0380009EAFF9 /* UIView+SWLayout.m */; };
-		368178861C5D0E6C009EAFF9 /* UIViewController+TXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178851C5D0E6C009EAFF9 /* UIViewController+TXCategory.m */; };
+		368178861C5D0E6C009EAFF9 /* UIViewController+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178851C5D0E6C009EAFF9 /* UIViewController+SWCategory.m */; };
 		368178891C5D0FF1009EAFF9 /* NSString+TXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178881C5D0FF1009EAFF9 /* NSString+TXCategory.m */; };
 		3681788C1C5D14EE009EAFF9 /* UIColor+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3681788B1C5D14EE009EAFF9 /* UIColor+SWCategory.m */; };
 		3681788F1C5D8CD2009EAFF9 /* UIImage+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3681788E1C5D8CD2009EAFF9 /* UIImage+SWCategory.m */; };
+		368178931C5D9791009EAFF9 /* SWTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178921C5D9791009EAFF9 /* SWTableView.m */; };
+		368178961C5D9863009EAFF9 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178951C5D9863009EAFF9 /* SWTableViewCell.m */; };
+		368178991C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178981C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m */; };
+		3681789C1C5D9C80009EAFF9 /* UIView+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3681789B1C5D9C80009EAFF9 /* UIView+SWCategory.m */; };
+		3681789E1C5DB688009EAFF9 /* Me.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3681789D1C5DB688009EAFF9 /* Me.xcassets */; };
+		368178A11C5DBD48009EAFF9 /* SWBorderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178A01C5DBD48009EAFF9 /* SWBorderTableViewCell.m */; };
 		A346B897F35EA4ECA7C038E2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E767AE30E7D8CC96D336A65F /* libPods.a */; };
 		F74982D01C5C626E0004C392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982CF1C5C626E0004C392 /* main.m */; };
 		F74982D31C5C626E0004C392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982D21C5C626E0004C392 /* AppDelegate.m */; };
@@ -52,14 +58,25 @@
 		2A593A29888175AA9F518DD1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		368178811C5D0380009EAFF9 /* UIView+SWLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SWLayout.h"; sourceTree = "<group>"; };
 		368178821C5D0380009EAFF9 /* UIView+SWLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWLayout.m"; sourceTree = "<group>"; };
-		368178841C5D0E6C009EAFF9 /* UIViewController+TXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TXCategory.h"; sourceTree = "<group>"; };
-		368178851C5D0E6C009EAFF9 /* UIViewController+TXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TXCategory.m"; sourceTree = "<group>"; };
+		368178841C5D0E6C009EAFF9 /* UIViewController+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWCategory.h"; sourceTree = "<group>"; };
+		368178851C5D0E6C009EAFF9 /* UIViewController+SWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWCategory.m"; sourceTree = "<group>"; };
 		368178871C5D0FF1009EAFF9 /* NSString+TXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TXCategory.h"; sourceTree = "<group>"; };
 		368178881C5D0FF1009EAFF9 /* NSString+TXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TXCategory.m"; sourceTree = "<group>"; };
 		3681788A1C5D14EE009EAFF9 /* UIColor+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SWCategory.h"; sourceTree = "<group>"; };
 		3681788B1C5D14EE009EAFF9 /* UIColor+SWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SWCategory.m"; sourceTree = "<group>"; };
 		3681788D1C5D8CD2009EAFF9 /* UIImage+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SWCategory.h"; sourceTree = "<group>"; };
 		3681788E1C5D8CD2009EAFF9 /* UIImage+SWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SWCategory.m"; sourceTree = "<group>"; };
+		368178911C5D9791009EAFF9 /* SWTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableView.h; sourceTree = "<group>"; };
+		368178921C5D9791009EAFF9 /* SWTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableView.m; sourceTree = "<group>"; };
+		368178941C5D9863009EAFF9 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		368178951C5D9863009EAFF9 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		368178971C5D9C15009EAFF9 /* UITableViewCell+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SWCategory.h"; sourceTree = "<group>"; };
+		368178981C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SWCategory.m"; sourceTree = "<group>"; };
+		3681789A1C5D9C80009EAFF9 /* UIView+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SWCategory.h"; sourceTree = "<group>"; };
+		3681789B1C5D9C80009EAFF9 /* UIView+SWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWCategory.m"; sourceTree = "<group>"; };
+		3681789D1C5DB688009EAFF9 /* Me.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Me.xcassets; sourceTree = "<group>"; };
+		3681789F1C5DBD48009EAFF9 /* SWBorderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBorderTableViewCell.h; sourceTree = "<group>"; };
+		368178A01C5DBD48009EAFF9 /* SWBorderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBorderTableViewCell.m; sourceTree = "<group>"; };
 		A6564507A02BC10588941D8F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E767AE30E7D8CC96D336A65F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74982CB1C5C626E0004C392 /* iOS-oc-wechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-oc-wechat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +142,7 @@
 		3681787F1C5D0349009EAFF9 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				368178901C5D976B009EAFF9 /* customViews */,
 				368178801C5D034F009EAFF9 /* categories */,
 			);
 			name = libs;
@@ -137,14 +155,31 @@
 				368178881C5D0FF1009EAFF9 /* NSString+TXCategory.m */,
 				368178811C5D0380009EAFF9 /* UIView+SWLayout.h */,
 				368178821C5D0380009EAFF9 /* UIView+SWLayout.m */,
+				3681789A1C5D9C80009EAFF9 /* UIView+SWCategory.h */,
+				3681789B1C5D9C80009EAFF9 /* UIView+SWCategory.m */,
 				3681788A1C5D14EE009EAFF9 /* UIColor+SWCategory.h */,
 				3681788B1C5D14EE009EAFF9 /* UIColor+SWCategory.m */,
-				368178841C5D0E6C009EAFF9 /* UIViewController+TXCategory.h */,
-				368178851C5D0E6C009EAFF9 /* UIViewController+TXCategory.m */,
+				368178971C5D9C15009EAFF9 /* UITableViewCell+SWCategory.h */,
+				368178981C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m */,
+				368178841C5D0E6C009EAFF9 /* UIViewController+SWCategory.h */,
+				368178851C5D0E6C009EAFF9 /* UIViewController+SWCategory.m */,
 				3681788D1C5D8CD2009EAFF9 /* UIImage+SWCategory.h */,
 				3681788E1C5D8CD2009EAFF9 /* UIImage+SWCategory.m */,
 			);
 			name = categories;
+			sourceTree = "<group>";
+		};
+		368178901C5D976B009EAFF9 /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+				368178911C5D9791009EAFF9 /* SWTableView.h */,
+				368178921C5D9791009EAFF9 /* SWTableView.m */,
+				368178941C5D9863009EAFF9 /* SWTableViewCell.h */,
+				368178951C5D9863009EAFF9 /* SWTableViewCell.m */,
+				3681789F1C5DBD48009EAFF9 /* SWBorderTableViewCell.h */,
+				368178A01C5DBD48009EAFF9 /* SWBorderTableViewCell.m */,
+			);
+			name = customViews;
 			sourceTree = "<group>";
 		};
 		57F3D1BC79AF79A12C8F1318 /* Frameworks */ = {
@@ -273,6 +308,7 @@
 			children = (
 				F749831B1C5C8A2C0004C392 /* SWMeViewController.h */,
 				F749831C1C5C8A2C0004C392 /* SWMeViewController.m */,
+				3681789D1C5DB688009EAFF9 /* Me.xcassets */,
 			);
 			name = "我";
 			sourceTree = "<group>";
@@ -384,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74982E11C5C626E0004C392 /* LaunchScreen.storyboard in Resources */,
+				3681789E1C5DB688009EAFF9 /* Me.xcassets in Resources */,
 				F74982DE1C5C626E0004C392 /* Assets.xcassets in Resources */,
 				F74982D91C5C626E0004C392 /* Main.storyboard in Resources */,
 			);
@@ -458,16 +495,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368178A11C5DBD48009EAFF9 /* SWBorderTableViewCell.m in Sources */,
 				F749831A1C5C8A140004C392 /* SWDiscoveryViewController.m in Sources */,
 				F749830D1C5C88B40004C392 /* SWHomeTabbarController.m in Sources */,
 				F749831D1C5C8A2C0004C392 /* SWMeViewController.m in Sources */,
+				368178931C5D9791009EAFF9 /* SWTableView.m in Sources */,
 				3681788F1C5D8CD2009EAFF9 /* UIImage+SWCategory.m in Sources */,
-				368178861C5D0E6C009EAFF9 /* UIViewController+TXCategory.m in Sources */,
+				368178861C5D0E6C009EAFF9 /* UIViewController+SWCategory.m in Sources */,
+				368178991C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m in Sources */,
 				F74982D61C5C626E0004C392 /* ViewController.m in Sources */,
 				368178831C5D0380009EAFF9 /* UIView+SWLayout.m in Sources */,
 				F74982DC1C5C626E0004C392 /* iOS_oc_wechat.xcdatamodeld in Sources */,
 				368178891C5D0FF1009EAFF9 /* NSString+TXCategory.m in Sources */,
+				3681789C1C5D9C80009EAFF9 /* UIView+SWCategory.m in Sources */,
 				F74983141C5C89E00004C392 /* SWChatViewController.m in Sources */,
+				368178961C5D9863009EAFF9 /* SWTableViewCell.m in Sources */,
 				3681788C1C5D14EE009EAFF9 /* UIColor+SWCategory.m in Sources */,
 				F74982D31C5C626E0004C392 /* AppDelegate.m in Sources */,
 				F74983171C5C89FA0004C392 /* SWConsultViewController.m in Sources */,

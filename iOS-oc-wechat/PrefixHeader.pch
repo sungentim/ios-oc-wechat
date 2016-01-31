@@ -16,9 +16,15 @@
 
 #import "NSString+TXCategory.h"
 #import "UIView+SWLayout.h"
+#import "UIView+SWCategory.h"
 #import "UIColor+SWCategory.h"
 #import "UIImage+SWCategory.h"
+
+#import "SWTableViewCell.h"
+#import "SWTableView.h"
+#import "SWBorderTableViewCell.h"
 #import "SWBaseViewController.h"
+
 
 #define kkScreenSize   ([UIScreen mainScreen].bounds.size)
 #define kkScreenWidth  (kkScreenSize.width)

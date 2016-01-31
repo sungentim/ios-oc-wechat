@@ -21,7 +21,7 @@
     // 设置全局导航栏的背景颜色
     [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     //欢迎页面延长5秒消失
-    [NSThread sleepForTimeInterval:5.0];
+    [NSThread sleepForTimeInterval:2.0];
     
     //  tabbarController
     SWHomeTabbarController *homeTabbarCtrl = [[SWHomeTabbarController alloc] init];

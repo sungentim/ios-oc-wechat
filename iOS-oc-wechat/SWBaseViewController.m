@@ -7,7 +7,7 @@
 //
 
 #import "SWBaseViewController.h"
-#import "UIViewController+TXCategory.h"
+#import "UIViewController+SWCategory.h"
 @implementation SWBaseViewController
 
 - (void)viewDidLoad {
@@ -25,6 +25,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+// 选中某个tableview中的选项 自动取消选中状态
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 
 //设置状态栏文字为白色 如果viweController在navigationController中则需要写到navigationController中
