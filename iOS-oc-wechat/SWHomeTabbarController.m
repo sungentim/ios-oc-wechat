@@ -71,30 +71,28 @@
     
     SWDiscoveryViewController *discoveryCtrl = [[SWDiscoveryViewController alloc] init];
     discoveryCtrl.title = @"发现";
-    discoveryCtrl.tabBarItem.title = @"发现1";
     
     SWMeViewController *meCtrl = [[SWMeViewController alloc] init];
     meCtrl.title = @"我";
-    meCtrl.tabBarItem.title = @"我1";
     
     
     SWBaseNavigationController *chatNavCtrl = [[SWBaseNavigationController alloc] initWithRootViewController:chatCtrl];
-    chatNavCtrl.tabBarItem.title = @"微信1";
+    chatNavCtrl.tabBarItem.title = @"微信";
     chatNavCtrl.tabBarItem.image = [UIImage imageNamed:@"tabbar_chat"];
     [chatNavCtrl setHidesBottomBarWhenPushed:YES];
     
     SWBaseNavigationController *consultNavCtrl = [[SWBaseNavigationController alloc] initWithRootViewController:consultCtrl];
-    consultNavCtrl.tabBarItem.title = @"通讯录1";
+    consultNavCtrl.tabBarItem.title = @"通讯录";
     consultNavCtrl.tabBarItem.image = [UIImage imageNamed:@"tabbar_contact"];
     [consultNavCtrl setHidesBottomBarWhenPushed:YES];
     
     SWBaseNavigationController *discoveryNavCtrl = [[SWBaseNavigationController alloc] initWithRootViewController:discoveryCtrl];
-    discoveryNavCtrl.tabBarItem.title = @"发现1";
+    discoveryNavCtrl.tabBarItem.title = @"发现";
     discoveryNavCtrl.tabBarItem.image = [UIImage imageNamed:@"tabbar_discovery"];
     [discoveryNavCtrl setHidesBottomBarWhenPushed:YES];
     
     SWBaseNavigationController *meNavCtrl = [[SWBaseNavigationController alloc] initWithRootViewController:meCtrl];
-    meNavCtrl.tabBarItem.title = @"我1";
+    meNavCtrl.tabBarItem.title = @"我";
     meNavCtrl.tabBarItem.image = [UIImage imageNamed:@"tabbar_me"];
     [meNavCtrl setHidesBottomBarWhenPushed:YES];
     

@@ -41,13 +41,13 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section==0) return 18.0f;
+    if (section==0) return 12.0f;
     return 0.1f;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 22.0f;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 22.0f;
+//}
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) return 66.0f;
     return 44.0f;
@@ -55,7 +55,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SWTableViewCell *cell = [[SWTableViewCell alloc] initWithStyle: indexPath.section == 0 ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
-    
     
     if(indexPath.section == 0){
         cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
