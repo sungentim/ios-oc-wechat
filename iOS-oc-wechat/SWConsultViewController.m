@@ -96,10 +96,11 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SWTableViewCell *cell = [[SWTableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"consultItem"];
+    SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@"consultItem"];
     switch (indexPath.section) {
         case 0:
         {
+            cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@"consultSearch"];
             [cell addSubview:_searchBar];
             break;
         }

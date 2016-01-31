@@ -20,7 +20,6 @@
     
     //为UINavigationBar设置半透明的背景效果 注:在iOS7中 默认生成 UINavigationBar的translucent属性为YES. 自动添加遮罩模糊效果.
     [self.navigationBar setTranslucent:YES];
-    NSLog(@"%@", self.navigationBar);
 }
 
 - (void)didReceiveMemoryWarning {

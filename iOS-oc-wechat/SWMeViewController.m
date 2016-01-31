@@ -54,7 +54,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SWTableViewCell *cell = [[SWTableViewCell alloc] initWithStyle: indexPath.section == 0 ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
+    SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
     
     if(indexPath.section == 0){
         cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];

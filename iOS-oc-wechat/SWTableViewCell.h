@@ -14,4 +14,8 @@ typedef void (^SWVoidBlock_id)(SWTableViewCell *tableCell);
 @property (nonatomic,assign) SWVoidBlock_id layoutSubViewEndDoBlock;
 - (void)i_layoutSubViewsEndDo:(SWVoidBlock_id)block;
 
++ (instancetype)cellGetWithTableView: (UITableView *)tableView Style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
+
+
 @end

@@ -10,12 +10,12 @@
 #import "UITableViewCell+SWCategory.h"
 @implementation SWTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier{
-   
-    if (self.i_tableView) {
-        return [self.i_tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
++ (instancetype)cellGetWithTableView: (UITableView *)tableView Style:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier{
+   SWTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (!cell){
+        cell = [[SWTableViewCell alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
     }
-    return [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    return cell;
 }
 
 - (void) layoutSubviews
