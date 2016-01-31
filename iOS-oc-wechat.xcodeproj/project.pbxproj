@@ -18,6 +18,7 @@
 		3681789C1C5D9C80009EAFF9 /* UIView+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3681789B1C5D9C80009EAFF9 /* UIView+SWCategory.m */; };
 		3681789E1C5DB688009EAFF9 /* Me.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3681789D1C5DB688009EAFF9 /* Me.xcassets */; };
 		368178A11C5DBD48009EAFF9 /* SWBorderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178A01C5DBD48009EAFF9 /* SWBorderTableViewCell.m */; };
+		368178A41C5DC539009EAFF9 /* MyHeader@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 368178A31C5DC539009EAFF9 /* MyHeader@2x.jpg */; };
 		A346B897F35EA4ECA7C038E2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E767AE30E7D8CC96D336A65F /* libPods.a */; };
 		F74982D01C5C626E0004C392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982CF1C5C626E0004C392 /* main.m */; };
 		F74982D31C5C626E0004C392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982D21C5C626E0004C392 /* AppDelegate.m */; };
@@ -77,6 +78,7 @@
 		3681789D1C5DB688009EAFF9 /* Me.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Me.xcassets; sourceTree = "<group>"; };
 		3681789F1C5DBD48009EAFF9 /* SWBorderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBorderTableViewCell.h; sourceTree = "<group>"; };
 		368178A01C5DBD48009EAFF9 /* SWBorderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBorderTableViewCell.m; sourceTree = "<group>"; };
+		368178A31C5DC539009EAFF9 /* MyHeader@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MyHeader@2x.jpg"; sourceTree = "<group>"; };
 		A6564507A02BC10588941D8F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E767AE30E7D8CC96D336A65F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74982CB1C5C626E0004C392 /* iOS-oc-wechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-oc-wechat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,14 @@
 				368178A01C5DBD48009EAFF9 /* SWBorderTableViewCell.m */,
 			);
 			name = customViews;
+			sourceTree = "<group>";
+		};
+		368178A21C5DC530009EAFF9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				368178A31C5DC539009EAFF9 /* MyHeader@2x.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		57F3D1BC79AF79A12C8F1318 /* Frameworks */ = {
@@ -309,6 +319,7 @@
 				F749831B1C5C8A2C0004C392 /* SWMeViewController.h */,
 				F749831C1C5C8A2C0004C392 /* SWMeViewController.m */,
 				3681789D1C5DB688009EAFF9 /* Me.xcassets */,
+				368178A21C5DC530009EAFF9 /* images */,
 			);
 			name = "我";
 			sourceTree = "<group>";
@@ -423,6 +434,7 @@
 				3681789E1C5DB688009EAFF9 /* Me.xcassets in Resources */,
 				F74982DE1C5C626E0004C392 /* Assets.xcassets in Resources */,
 				F74982D91C5C626E0004C392 /* Main.storyboard in Resources */,
+				368178A41C5DC539009EAFF9 /* MyHeader@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

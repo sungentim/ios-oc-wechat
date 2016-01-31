@@ -48,13 +48,37 @@
 {
     return 22.0f;
 }
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) return 66.0f;
+    return 44.0f;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SWBorderTableViewCell *cell = [[SWBorderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
+    SWTableViewCell *cell = [[SWTableViewCell alloc] initWithStyle: indexPath.section == 0 ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
     
     
     if(indexPath.section == 0){
-        
+        cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
+        cell.textLabel.text = @"咫尺天涯";
+        cell.detailTextLabel.text = @"微信号:wangsen578595193";
+//        cell.i_laSWTableViewCell
+        [cell i_layoutSubViewsEndDo:^(SWTableViewCell *tableCell) {
+            tableCell.imageView.x = 10;
+            tableCell.imageView.y = 7;
+            tableCell.imageView.height = tableCell.height - 2 * tableCell.imageView.y;
+            tableCell.imageView.width = tableCell.imageView.height;
+            [tableCell.imageView setBorderRadius:5.0f];
+            
+            tableCell.textLabel.x = 2 * tableCell.imageView.x + tableCell.imageView.width;
+            tableCell.textLabel.y = tableCell.textLabel.y - 2;
+            
+            tableCell.detailTextLabel.x = tableCell.textLabel.x;
+            tableCell.detailTextLabel.y = tableCell.detailTextLabel.y + 2;
+            
+            UIImageView *qrCode = [[UIImageView alloc] initWithFrame:CGRectMake(tableCell.width - 50, 25, 16, 16)];
+            qrCode.image = [UIImage imageNamed:@"MyQRCode"];
+            [tableCell.contentView addSubview:qrCode];
+        }];
     }else{
         NSInteger array_index = indexPath.section + indexPath.row - 1;
         cell.imageView.image = @[[UIImage imageNamed:@"MyAlbum"],[UIImage imageNamed:@"MyFavorites"],[UIImage imageNamed:@"MorePurse"],[UIImage imageNamed:@"MyCardPackage"],[UIImage imageNamed:@"MyFace"],[UIImage imageNamed:@"MySetting"]][array_index];

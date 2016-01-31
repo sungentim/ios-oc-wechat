@@ -25,4 +25,7 @@
 - (CGPoint) origin;
 - (CGSize)  size;
 
+//设置圆角
+- (void)setBorderRadius:(CGFloat)radius;
+
 @end

@@ -147,5 +147,13 @@ CGRect rectSetSize(CGRect rect, CGSize size) {
 }
 
 //===========================================================
-
+#pragma mark - 圆形视图
+/**
+ *  将视图 转换 成 圆形
+ */
+- (void)setBorderRadius:(CGFloat)radius
+{
+    [self.layer setCornerRadius:radius];
+    [self.layer setMasksToBounds:YES];
+}
 @end
