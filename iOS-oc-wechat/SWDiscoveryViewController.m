@@ -8,7 +8,7 @@
 
 #import "SWDiscoveryViewController.h"
 
-@interface SWDiscoveryViewController ()
+@interface SWDiscoveryViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -17,21 +17,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self layoutMyViews];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)layoutMyViews {
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    [self.view addSubview:tableView];
+    tableView.delegate = self;
+    tableView.dataSource = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return 4;
 }
-*/
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[@[@1,@2,@2,@2] objectAtIndex:section] intValue];
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section==0) return 12.0f;
+    return 5.0f;
+}
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPat
+{
+    return 44.0f;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@"discovery_item"];
+    
+    cell.imageView.image = @[[UIImage imageNamed:@"FriendCircle"],@0, [UIImage imageNamed:@"ScanScan"],[UIImage imageNamed:@"ShakeShake"],[UIImage imageNamed:@"NearPeople"],[UIImage imageNamed:@"CurrentBottle"],[UIImage imageNamed:@"Shopping"],[UIImage imageNamed:@"MoreGame"]][indexPath.section * 2 + indexPath.row];
+
+    cell.textLabel.text = @"表情";
+    
+    [cell i_layoutSubViewsEndDo_onlyOnce:^(SWTableViewCell *tableCell) {
+        [tableCell.imageView setWidth:25];
+        [tableCell.imageView setHeight:25];
+    }];
+    
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    return cell;
+}
+
+
+
+
 
 @end
