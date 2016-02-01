@@ -25,6 +25,8 @@
 #import "SWBorderTableViewCell.h"
 #import "SWBaseViewController.h"
 
+#import <Masonry.h>
+
 
 #define kkScreenSize   ([UIScreen mainScreen].bounds.size)
 #define kkScreenWidth  (kkScreenSize.width)

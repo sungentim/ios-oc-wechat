@@ -61,7 +61,7 @@
         cell.textLabel.text = @"咫尺天涯";
         cell.detailTextLabel.text = @"微信号:wangsen578595193";
 //        cell.i_laSWTableViewCell
-        [cell i_layoutSubViewsEndDo:^(SWTableViewCell *tableCell) {
+        [cell i_layoutSubViewsEndDo_onlyOnce:^(SWTableViewCell *tableCell) {
             tableCell.imageView.x = 10;
             tableCell.imageView.y = 7;
             tableCell.imageView.height = tableCell.height - 2 * tableCell.imageView.y;
