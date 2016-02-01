@@ -49,7 +49,7 @@
     
     cell.imageView.image = @[[UIImage imageNamed:@"FriendCircle"],@0, [UIImage imageNamed:@"ScanScan"],[UIImage imageNamed:@"ShakeShake"],[UIImage imageNamed:@"NearPeople"],[UIImage imageNamed:@"CurrentBottle"],[UIImage imageNamed:@"Shopping"],[UIImage imageNamed:@"MoreGame"]][indexPath.section * 2 + indexPath.row];
 
-    cell.textLabel.text = @"表情";
+    cell.textLabel.text = @[@"朋友圈", @"", @"扫一扫", @"摇一摇", @"附近的人",@"漂流瓶", @"购物", @"游戏"][indexPath.section * 2 + indexPath.row];
     
     [cell i_layoutSubViewsEndDo_onlyOnce:^(SWTableViewCell *tableCell) {
         [tableCell.imageView setWidth:25];
