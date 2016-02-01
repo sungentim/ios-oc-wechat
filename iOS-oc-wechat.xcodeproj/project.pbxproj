@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		361F4B811C6025A2004D7FF7 /* Discovery.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361F4B801C6025A2004D7FF7 /* Discovery.xcassets */; };
 		368178831C5D0380009EAFF9 /* UIView+SWLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178821C5D0380009EAFF9 /* UIView+SWLayout.m */; };
 		368178861C5D0E6C009EAFF9 /* UIViewController+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178851C5D0E6C009EAFF9 /* UIViewController+SWCategory.m */; };
 		368178891C5D0FF1009EAFF9 /* NSString+TXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178881C5D0FF1009EAFF9 /* NSString+TXCategory.m */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		2A593A29888175AA9F518DD1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		361F4B801C6025A2004D7FF7 /* Discovery.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Discovery.xcassets; sourceTree = "<group>"; };
 		368178811C5D0380009EAFF9 /* UIView+SWLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SWLayout.h"; sourceTree = "<group>"; };
 		368178821C5D0380009EAFF9 /* UIView+SWLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWLayout.m"; sourceTree = "<group>"; };
 		368178841C5D0E6C009EAFF9 /* UIViewController+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWCategory.h"; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			children = (
 				F74983181C5C8A140004C392 /* SWDiscoveryViewController.h */,
 				F74983191C5C8A140004C392 /* SWDiscoveryViewController.m */,
+				361F4B801C6025A2004D7FF7 /* Discovery.xcassets */,
 			);
 			name = "发现";
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				F74982E11C5C626E0004C392 /* LaunchScreen.storyboard in Resources */,
 				3681789E1C5DB688009EAFF9 /* Me.xcassets in Resources */,
 				F74982DE1C5C626E0004C392 /* Assets.xcassets in Resources */,
+				361F4B811C6025A2004D7FF7 /* Discovery.xcassets in Resources */,
 				F74982D91C5C626E0004C392 /* Main.storyboard in Resources */,
 				368178A41C5DC539009EAFF9 /* MyHeader@2x.jpg in Resources */,
 			);
