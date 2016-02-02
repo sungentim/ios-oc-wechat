@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setStatusBarBgColor];
     [self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view.
     
@@ -29,6 +30,7 @@
 //    [self.view addSubview:tableView];
     
     _searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(0.0, 20.0, kkScreenWidth, 44.0)];
+    NSLog(@"%@", [_searchBar i_howLayout]);
     _searchBar.showsCancelButton = YES;
     _searchBar.autocapitalizationType=UITextAutocapitalizationTypeNone;
     _searchBar.keyboardType=UIKeyboardTypeDefault;
@@ -40,7 +42,6 @@
     _searchBar.delegate=self;
     [self.view addSubview:_searchBar];
     
-    [self setStatusBarBgColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

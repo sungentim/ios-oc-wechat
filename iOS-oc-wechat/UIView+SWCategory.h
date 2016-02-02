@@ -13,4 +13,7 @@
 - (UIViewController*)viewController;
 - (UIView *)i_superview_withSuperClassType:(Class)aClass;
 
+
+- (NSString *)i_howLayout;
+
 @end
