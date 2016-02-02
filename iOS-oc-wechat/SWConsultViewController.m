@@ -10,6 +10,8 @@
 
 #import "SWBaseNavigationController.h"
 #import "SWConsultSearchViewController.h"
+
+#import "UIViewController+SWCategory.h"
 #define ktitleSection @[@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
 @interface SWConsultViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
@@ -23,6 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //   设置导航条
+    [self setNavigationBar];
+    
+    // 设置 搜索栏
+    [self addSearchBar];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView = tableView;
@@ -36,13 +43,14 @@
         _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
         _tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
     }
-    
-    [self addSearchBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 设置导航条
+- (void)setNavigationBar {
+    [self i_setRightBarButtonWithImage:[UIImage imageNamed:@"consult_barbutton_add_friend"] target:self action:@selector(rightBarButtonClick)];
+}
+- (void)rightBarButtonClick {
+    NSLog(@"%@", @"bar button click");
 }
 
 #pragma mark - searchBar相关 begin

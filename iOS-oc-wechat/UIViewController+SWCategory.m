@@ -104,7 +104,7 @@
 - (void)i_setRightBarButtonWithImage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action
 {
     
-    UIButton *rightButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 29, 25)];
+    UIButton *rightButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
     [rightButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [rightButton setImage:image forState:UIControlStateNormal];
     [rightButton setImage:highImage forState:UIControlStateHighlighted];

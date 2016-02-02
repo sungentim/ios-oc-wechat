@@ -7,6 +7,7 @@
 //
 
 #import "SWChatViewController.h"
+#import "UIViewController+SWCategory.h"
 @interface SWChatViewController ()
 
 @end
@@ -16,12 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setNavigationBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 设置导航条
+- (void)setNavigationBar {
+    [self i_setRightBarButtonWithImage:[UIImage imageNamed:@"wechat_barbutton_add"] target:self action:@selector(rightBarButtonClick)];
 }
-
+- (void)rightBarButtonClick {
+    NSLog(@"%@", @"bar button click");
+}
 
 @end
