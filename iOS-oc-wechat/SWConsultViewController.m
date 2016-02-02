@@ -54,7 +54,17 @@
     _searchBar.delegate=self;
     _tableView.tableHeaderView=_searchBar;
 }
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    NSLog(@"should beginning");
+    [self.navigationController setNavigationBarHidden:YES];
+    return YES;
+}
+
 // searchBar相关 end
+
+
+
 
 
 

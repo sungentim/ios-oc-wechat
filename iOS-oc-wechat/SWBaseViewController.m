@@ -29,8 +29,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
-
 //设置状态栏文字为白色 如果viweController在navigationController中则需要写到navigationController中
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
