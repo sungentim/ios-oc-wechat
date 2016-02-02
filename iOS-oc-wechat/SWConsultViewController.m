@@ -7,7 +7,7 @@
 //
 
 #import "SWConsultViewController.h"
-#define ktitleSection @[@"",@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
+#define ktitleSection @[@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
 @interface SWConsultViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
     UISearchBar *_searchBar;
@@ -52,7 +52,7 @@
     _searchBar.placeholder=@"搜索";
     _searchBar.barStyle=UIBarStyleDefault;
     _searchBar.delegate=self;
-//    _tableView.tableHeaderView=_searchBar;
+    _tableView.tableHeaderView=_searchBar;
 }
 // searchBar相关 end
 
@@ -64,7 +64,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section <= 1 ) return 0.0f;
+    if (section == 0 ) return 0.0f;
     return 20.0f;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -73,7 +73,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 4, self.view.width,12)];
     [label setFont:[UIFont systemFontOfSize:14]];
     label.textColor = [UIColor grayColor];
-    label.text = section == 1 ? @"公众号" : ktitleSection[section];
+    label.text = ktitleSection[section];
     [view addSubview:label];
     return view;
 }
@@ -86,7 +86,7 @@
 }
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
-        case 1:
+        case 0:
             return 4;
             break;
         default:
@@ -98,22 +98,14 @@
 {
     SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@"consultItem"];
     switch (indexPath.section) {
-        case 0:
-        {
-            cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@"consultSearch"];
-            if (![cell.subviews containsObject:_searchBar]){
-                [cell addSubview:_searchBar];
-            }
-            break;
-        }
-        case 1:{
+        case 0:{
             NSLog(@"%zi", indexPath.row);
             cell.imageView.image = @[[UIImage imageNamed:@"plugins_FriendNotify"],[UIImage imageNamed:@"add_friend_icon_addgroup"],[UIImage imageNamed:@"Contact_icon_ContactTag"],[UIImage imageNamed:@"add_friend_icon_offical"]][indexPath.row];
             cell.textLabel.text = @[@"新的朋友", @"群聊", @"标签", @"公众号"][indexPath.row];
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
         }
-        case 2:{
+        case 1:{
             cell.imageView.image = @[[UIImage imageNamed:@"MyAlbum"]][0];
             cell.textLabel.text = @[@"星标朋友"][0];
             break;
