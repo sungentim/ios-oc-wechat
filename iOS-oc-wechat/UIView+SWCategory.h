@@ -10,6 +10,7 @@
 
 @interface UIView (SWCategory)
 
+- (UIViewController*)viewController;
 - (UIView *)i_superview_withSuperClassType:(Class)aClass;
 
 @end
