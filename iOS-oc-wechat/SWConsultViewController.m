@@ -7,6 +7,9 @@
 //
 
 #import "SWConsultViewController.h"
+
+#import "SWBaseNavigationController.h"
+#import "SWConsultSearchViewController.h"
 #define ktitleSection @[@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
 @interface SWConsultViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
@@ -42,7 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-// searchBar相关 begin
+#pragma mark - searchBar相关 begin
 - (void) addSearchBar{
     _searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(0.0, 0.0, kkScreenWidth, 44.0)];
     _searchBar.autocapitalizationType=UITextAutocapitalizationTypeNone;
@@ -57,17 +60,16 @@
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     NSLog(@"should beginning");
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
+    SWConsultSearchViewController *consultSearchCtrl = [[SWConsultSearchViewController alloc] init];
+    SWBaseNavigationController *baseNav = [[SWBaseNavigationController alloc] initWithRootViewController:consultSearchCtrl];
+    [self presentViewController:baseNav animated:NO completion:nil];
+    
     return YES;
 }
 
-// searchBar相关 end
 
-
-
-
-
-
+#pragma mark - tableView相关代理
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     return ktitleSection;

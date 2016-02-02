@@ -22,6 +22,7 @@
 		368178A41C5DC539009EAFF9 /* MyHeader@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 368178A31C5DC539009EAFF9 /* MyHeader@2x.jpg */; };
 		368178A61C5DF493009EAFF9 /* SWConsult.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368178A51C5DF493009EAFF9 /* SWConsult.xcassets */; };
 		A346B897F35EA4ECA7C038E2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E767AE30E7D8CC96D336A65F /* libPods.a */; };
+		F73E21951C60906500E0A68E /* SWConsultSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73E21941C60906500E0A68E /* SWConsultSearchViewController.m */; };
 		F74982D01C5C626E0004C392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982CF1C5C626E0004C392 /* main.m */; };
 		F74982D31C5C626E0004C392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982D21C5C626E0004C392 /* AppDelegate.m */; };
 		F74982D61C5C626E0004C392 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74982D51C5C626E0004C392 /* ViewController.m */; };
@@ -85,6 +86,8 @@
 		368178A51C5DF493009EAFF9 /* SWConsult.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SWConsult.xcassets; sourceTree = "<group>"; };
 		A6564507A02BC10588941D8F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E767AE30E7D8CC96D336A65F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73E21931C60906500E0A68E /* SWConsultSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWConsultSearchViewController.h; sourceTree = "<group>"; };
+		F73E21941C60906500E0A68E /* SWConsultSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWConsultSearchViewController.m; sourceTree = "<group>"; };
 		F74982CB1C5C626E0004C392 /* iOS-oc-wechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-oc-wechat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74982CF1C5C626E0004C392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F74982D11C5C626E0004C392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -305,6 +308,8 @@
 				F74983151C5C89FA0004C392 /* SWConsultViewController.h */,
 				F74983161C5C89FA0004C392 /* SWConsultViewController.m */,
 				368178A51C5DF493009EAFF9 /* SWConsult.xcassets */,
+				F73E21931C60906500E0A68E /* SWConsultSearchViewController.h */,
+				F73E21941C60906500E0A68E /* SWConsultSearchViewController.m */,
 			);
 			name = "通信录";
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				F74983201C5C8BD10004C392 /* SWBaseNavigationController.m in Sources */,
 				F74982D01C5C626E0004C392 /* main.m in Sources */,
 				F74983091C5C67C30004C392 /* SWBaseViewController.m in Sources */,
+				F73E21951C60906500E0A68E /* SWConsultSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
