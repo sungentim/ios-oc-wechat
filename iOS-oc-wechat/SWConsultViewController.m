@@ -13,10 +13,13 @@
 
 #import "UIViewController+SWCategory.h"
 #define ktitleSection @[@"",@"☆",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
+#define kColorBlue [UIColor colorWithRed:0 green:0 blue:200/255 alpha:0.8]
 @interface SWConsultViewController ()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
     UISearchBar *_searchBar;
     UITableView *_tableView;
+    
+    UIButton *_btn;//滑动显示按钮ABCDE。。。
 }
 @end
 
@@ -27,9 +30,6 @@
     // Do any additional setup after loading the view.
     //   设置导航条
     [self setNavigationBar];
-    
-    // 设置 搜索栏
-    [self addSearchBar];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView = tableView;
@@ -43,6 +43,9 @@
         _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
         _tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
     }
+    
+    // 设置 搜索栏
+    [self addSearchBar];
 }
 
 #pragma mark - 设置导航条
@@ -145,8 +148,44 @@
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
 
-    NSLog(@"%zi", index);
-    return index;
+    NSInteger count = 0;
+    for(NSString *character in ktitleSection)
+    {
+        if([character isEqualToString:title])
+        {
+            [self createIndexBtn:title];
+            return count;
+        }
+        count ++;
+    }
+    return 0;
+}
+#pragma mark -滑动到某个字母显示一个大按钮
+-(void)createIndexBtn:(NSString *)title
+{
+    if (_btn == nil) {
+        _btn = [[UIButton alloc]initWithFrame:CGRectMake(200, 210, 50, 50)];
+        _btn.backgroundColor = kColorBlue;
+        _btn.layer.cornerRadius = 5;
+        [_btn setAlpha:0.7];
+    }
+    [_btn setTitle:title forState:UIControlStateNormal];
+    
+    [self.view addSubview:_btn];
+    
+    [[self class] cancelPreviousPerformRequestsWithTarget:self selector:@selector(removeBtn) object:nil];
+    [self performSelector:@selector(removeBtn) withObject:nil afterDelay:0.5];
+}
+-(void)removeBtn
+{
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        _btn.alpha = 0;
+    } completion:^(BOOL finished) {
+        _btn.alpha = 0.7;
+        [_btn removeFromSuperview];
+    }];
+    
 }
 
 
