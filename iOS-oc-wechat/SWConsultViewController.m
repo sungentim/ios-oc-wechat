@@ -138,7 +138,7 @@
 {
 
     NSLog(@"%zi", index);
-    return 0;
+    return index;
 }
 
 
