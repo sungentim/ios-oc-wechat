@@ -121,6 +121,16 @@
     return cell;
 }
 
+//滑动索引执行该方法
+-(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+
+    NSLog(@"%zi", index);
+    return 0;
+}
+
+
+
 
 
 
