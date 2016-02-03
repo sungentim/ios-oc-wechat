@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		361F4B811C6025A2004D7FF7 /* Discovery.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361F4B801C6025A2004D7FF7 /* Discovery.xcassets */; };
 		361F4B831C61019A004D7FF7 /* wechat.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361F4B821C61019A004D7FF7 /* wechat.xcassets */; };
+		361F4B881C624805004D7FF7 /* UIAlertView+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 361F4B871C624805004D7FF7 /* UIAlertView+SWCategory.m */; };
 		368178831C5D0380009EAFF9 /* UIView+SWLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178821C5D0380009EAFF9 /* UIView+SWLayout.m */; };
 		368178861C5D0E6C009EAFF9 /* UIViewController+SWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178851C5D0E6C009EAFF9 /* UIViewController+SWCategory.m */; };
 		368178891C5D0FF1009EAFF9 /* NSString+TXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 368178881C5D0FF1009EAFF9 /* NSString+TXCategory.m */; };
@@ -64,6 +65,9 @@
 		2A593A29888175AA9F518DD1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		361F4B801C6025A2004D7FF7 /* Discovery.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Discovery.xcassets; sourceTree = "<group>"; };
 		361F4B821C61019A004D7FF7 /* wechat.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = wechat.xcassets; sourceTree = "<group>"; };
+		361F4B841C624382004D7FF7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		361F4B861C624805004D7FF7 /* UIAlertView+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+SWCategory.h"; sourceTree = "<group>"; };
+		361F4B871C624805004D7FF7 /* UIAlertView+SWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+SWCategory.m"; sourceTree = "<group>"; };
 		368178811C5D0380009EAFF9 /* UIView+SWLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SWLayout.h"; sourceTree = "<group>"; };
 		368178821C5D0380009EAFF9 /* UIView+SWLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWLayout.m"; sourceTree = "<group>"; };
 		368178841C5D0E6C009EAFF9 /* UIViewController+SWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWCategory.h"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				3681789B1C5D9C80009EAFF9 /* UIView+SWCategory.m */,
 				3681788A1C5D14EE009EAFF9 /* UIColor+SWCategory.h */,
 				3681788B1C5D14EE009EAFF9 /* UIColor+SWCategory.m */,
+				361F4B861C624805004D7FF7 /* UIAlertView+SWCategory.h */,
+				361F4B871C624805004D7FF7 /* UIAlertView+SWCategory.m */,
 				368178971C5D9C15009EAFF9 /* UITableViewCell+SWCategory.h */,
 				368178981C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m */,
 				368178841C5D0E6C009EAFF9 /* UIViewController+SWCategory.h */,
@@ -208,6 +214,7 @@
 		57F3D1BC79AF79A12C8F1318 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				361F4B841C624382004D7FF7 /* MessageUI.framework */,
 				E767AE30E7D8CC96D336A65F /* libPods.a */,
 			);
 			name = Frameworks;
@@ -555,6 +562,7 @@
 				368178861C5D0E6C009EAFF9 /* UIViewController+SWCategory.m in Sources */,
 				368178991C5D9C15009EAFF9 /* UITableViewCell+SWCategory.m in Sources */,
 				F74982D61C5C626E0004C392 /* ViewController.m in Sources */,
+				361F4B881C624805004D7FF7 /* UIAlertView+SWCategory.m in Sources */,
 				368178831C5D0380009EAFF9 /* UIView+SWLayout.m in Sources */,
 				F74982DC1C5C626E0004C392 /* iOS_oc_wechat.xcdatamodeld in Sources */,
 				F73E219A1C61EAD900E0A68E /* SWCrashReport.m in Sources */,

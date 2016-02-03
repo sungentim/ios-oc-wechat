@@ -7,7 +7,6 @@
 //
 
 #import "SWCrashReport.h"
-
 @implementation SWCrashReport
 
 kSWStrictSingletonForClass(SWCrashReport)
@@ -26,9 +25,15 @@ void UncaughtExceptionHandler(NSException *exception) {
     
 }
 
+#pragma mark - 直接跳到系统的发送邮件功能
 void sendEmailCrashMessage(NSString *crashLogInfo) {
+    //获取用户是否设置了邮件账户：
     NSString *urlStr = [NSString stringWithFormat:@"mailto://578595193@qq.com?subject=bug报告&body=感谢您的配合! 错误详情:%@",crashLogInfo];
     NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [[UIApplication sharedApplication] openURL:url];
 }
+
+
+
+
 @end
