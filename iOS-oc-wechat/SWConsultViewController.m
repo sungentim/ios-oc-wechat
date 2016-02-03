@@ -124,7 +124,7 @@
         case 0:{
             NSLog(@"%zi", indexPath.row);
             cell.imageView.image = @[[UIImage imageNamed:@"plugins_FriendNotify"],[UIImage imageNamed:@"add_friend_icon_addgroup"],[UIImage imageNamed:@"Contact_icon_ContactTag"],[UIImage imageNamed:@"add_friend_icon_offical"]][indexPath.row];
-            cell.textLabel.text = @[@"新的朋友", @"群聊", @"标签", @"公众号"][indexPath.row];
+            cell.textLabel.text = @[@"新的朋友", @"群聊", @"标签", @"公众号"][indexPath.row + 10];
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
         }

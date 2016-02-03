@@ -16,6 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 注册程序崩溃获取
+    [SWCrashReport registerCrashReport];
     // Override point for customization after application launch.
     
     // 设置全局导航栏的背景颜色
