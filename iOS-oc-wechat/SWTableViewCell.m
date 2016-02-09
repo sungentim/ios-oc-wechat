@@ -24,7 +24,7 @@
 {
     [super layoutSubviews];
     
-    if (self.layoutSubViewEndDoBlock_onlyOnce){
+    if (self.layoutSubViewEndDoBlock_onlyOnce && !_is_layout_subviews_only_once_has_run){
         self.layoutSubViewEndDoBlock_onlyOnce(self);
     }
     if (self.layoutSubViewEndDoBlock) {
@@ -47,5 +47,8 @@
 {
     self.layoutSubViewEndDoBlock = block;
 }
-
+- (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)onlyOnceBlock everyTime:(SWVoidBlock_id)everyTime{
+    self.layoutSubViewEndDoBlock_onlyOnce = onlyOnceBlock;
+    self.layoutSubViewEndDoBlock = everyTime;
+}
 @end
