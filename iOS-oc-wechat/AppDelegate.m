@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SWHomeTabbarController.h"
+#import "SWSpotlightManager.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 注册程序崩溃获取
     [SWCrashReport registerCrashReport];
+    
+    // 测试Spotlight
+    [SWSpotlightManager testSpotlight];
     // Override point for customization after application launch.
     
     // 设置全局导航栏的背景颜色
@@ -55,6 +59,22 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+
+#pragma mark - CoreSpotlight 索引到内容点击 跳转到应用回调方法
+- (BOOL)application:(nonnull UIApplication *)application continueUserActivity:(nonnull NSUserActivity *)userActivity restorationHandler:(nonnull void (^)(NSArray * __nullable))restorationHandler{
+    
+    NSString *idetifier = userActivity.userInfo[@"kCSSearchableItemActivityIdentifier"];
+    NSLogE(@"core spotlight callback： %@", idetifier);
+    
+//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    SWConsultSearchViewController *consultSearchCtrl = [[SWConsultSearchViewController alloc] init];
+//    SWBaseNavigationController *baseNav = [[SWBaseNavigationController alloc] initWithRootViewController:consultSearchCtrl];
+//    [navigationController presentViewController:baseNav animated:NO completion:nil];
+    
+    return YES;
+    
 }
 
 #pragma mark - Core Data stack

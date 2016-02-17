@@ -42,6 +42,8 @@
 		F749831A1C5C8A140004C392 /* SWDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74983191C5C8A140004C392 /* SWDiscoveryViewController.m */; };
 		F749831D1C5C8A2C0004C392 /* SWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749831C1C5C8A2C0004C392 /* SWMeViewController.m */; };
 		F74983201C5C8BD10004C392 /* SWBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749831F1C5C8BD10004C392 /* SWBaseNavigationController.m */; };
+		F78126071C7442B800D54E39 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78126061C7442B800D54E39 /* CoreSpotlight.framework */; };
+		F781260A1C74430F00D54E39 /* SWSpotlightManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F78126091C74430F00D54E39 /* SWSpotlightManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,9 @@
 		F749831C1C5C8A2C0004C392 /* SWMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWMeViewController.m; sourceTree = "<group>"; };
 		F749831E1C5C8BD10004C392 /* SWBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseNavigationController.h; sourceTree = "<group>"; };
 		F749831F1C5C8BD10004C392 /* SWBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseNavigationController.m; sourceTree = "<group>"; };
+		F78126061C7442B800D54E39 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		F78126081C74430F00D54E39 /* SWSpotlightManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSpotlightManager.h; sourceTree = "<group>"; };
+		F78126091C74430F00D54E39 /* SWSpotlightManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSpotlightManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78126071C7442B800D54E39 /* CoreSpotlight.framework in Frameworks */,
 				A346B897F35EA4ECA7C038E2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +220,7 @@
 		57F3D1BC79AF79A12C8F1318 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F78126061C7442B800D54E39 /* CoreSpotlight.framework */,
 				361F4B841C624382004D7FF7 /* MessageUI.framework */,
 				E767AE30E7D8CC96D336A65F /* libPods.a */,
 			);
@@ -232,6 +239,7 @@
 		F73E21961C61E6D100E0A68E /* funs */ = {
 			isa = PBXGroup;
 			children = (
+				F78126051C74426100D54E39 /* spotlight */,
 				F73E21971C61E6F600E0A68E /* crashReport */,
 			);
 			name = funs;
@@ -364,6 +372,15 @@
 				368178A21C5DC530009EAFF9 /* images */,
 			);
 			name = "我";
+			sourceTree = "<group>";
+		};
+		F78126051C74426100D54E39 /* spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				F78126081C74430F00D54E39 /* SWSpotlightManager.h */,
+				F78126091C74430F00D54E39 /* SWSpotlightManager.m */,
+			);
+			name = spotlight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,6 +593,7 @@
 				F74983201C5C8BD10004C392 /* SWBaseNavigationController.m in Sources */,
 				F74982D01C5C626E0004C392 /* main.m in Sources */,
 				F74983091C5C67C30004C392 /* SWBaseViewController.m in Sources */,
+				F781260A1C74430F00D54E39 /* SWSpotlightManager.m in Sources */,
 				F73E21951C60906500E0A68E /* SWConsultSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
