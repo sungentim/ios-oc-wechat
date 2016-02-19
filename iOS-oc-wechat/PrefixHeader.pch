@@ -35,6 +35,9 @@
 #define kkScreenHeight (kkScreenSize.height)
 #define kkScrreenRate (kkScreenWidth/320)
 
+// 创建weak弱类型引用weakSelf   使用：kkWeakSelf(me) 后： me 即是 self的弱类型引用
+#define kkWeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 
 #pragma mark - NSLog打印判断测试和生产
 /**
