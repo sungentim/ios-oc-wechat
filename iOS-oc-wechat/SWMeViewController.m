@@ -28,6 +28,7 @@
 
 - (void)layoutMyViews {
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    [tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)]; //分割线到图片下方对其
     [self.view addSubview:tableView];
     tableView.delegate = self;
     tableView.dataSource = self;

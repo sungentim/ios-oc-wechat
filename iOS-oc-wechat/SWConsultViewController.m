@@ -32,6 +32,7 @@
     [self setNavigationBar];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)]; //分割线到图片下方对其
     _tableView = tableView;
     _tableView.backgroundColor = [UIColor colorWithHexString:@"f2f2f2"];
     [self.view addSubview:tableView];
