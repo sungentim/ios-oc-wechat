@@ -62,9 +62,15 @@
         cell.textLabel.text = @"咫尺天涯";
         cell.detailTextLabel.text = @"微信号:wangsen578595193";
         [cell i_layoutSubViewsEndDo_onlyOnce:^(SWTableViewCell *tableCell) {
-            tableCell.i_isDependentEveryTimeBlock = YES;
-            
             [tableCell.imageView setBorderRadius:5.0f];
+            
+            UIImageView *qrCode = [[UIImageView alloc] initWithFrame:CGRectMake(tableCell.width - 50, 25, 16, 16)];
+            qrCode.image = [UIImage imageNamed:@"MyQRCode"];
+            [tableCell.contentView addSubview:qrCode];
+            [tableCell setObject:qrCode forMyKey:@"what"];
+        } everyTime:^(SWTableViewCell *tableCell) {
+            tableCell.imageView.bounds = CGRectMake(0, 0, 44.0f, 44.0f);
+            tableCell.imageView.x = 15;
             
             tableCell.textLabel.x = 2 * tableCell.imageView.x + tableCell.imageView.width;
             tableCell.textLabel.y = tableCell.textLabel.y - 2;
@@ -72,12 +78,9 @@
             tableCell.detailTextLabel.x = tableCell.textLabel.x;
             tableCell.detailTextLabel.y = tableCell.detailTextLabel.y + 2;
             
-            UIImageView *qrCode = [[UIImageView alloc] initWithFrame:CGRectMake(tableCell.width - 50, 25, 16, 16)];
-            qrCode.image = [UIImage imageNamed:@"MyQRCode"];
-            [tableCell.contentView addSubview:qrCode];
-        } everyTime:^(SWTableViewCell *tableCell) {
-            tableCell.imageView.bounds = CGRectMake(0, 0, 44.0f, 44.0f);
-            tableCell.imageView.x = 10;
+            UIImageView *qrCode = [tableCell objectForMyKey:@"what"];
+            NSLog(@"%@", qrCode);
+            
         }];
     }else{
         switch (indexPath.section) {

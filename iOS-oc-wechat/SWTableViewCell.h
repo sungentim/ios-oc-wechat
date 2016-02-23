@@ -16,13 +16,17 @@ typedef void (^SWVoidBlock_id)(SWTableViewCell *tableCell);
 @property (nonatomic, assign) BOOL i_isDependentEveryTimeBlock;
 
 @property (nonatomic, assign) SWVoidBlock_id layoutSubViewEndDoBlock_onlyOnce;
-@property (nonatomic, assign) SWVoidBlock_id layoutSubViewEndDoBlock;
+@property (nonatomic, assign) SWVoidBlock_id layoutSubViewEndDoBlock; //everyTime
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)block;
 - (void)i_layoutSubViewsEndDo:(SWVoidBlock_id)block;
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)onlyOnceBlock everyTime:(SWVoidBlock_id)everyTime;
 
 
 + (instancetype)cellGetWithTableView: (UITableView *)tableView Style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
+//对新增空间设置key
+- (void) setObject: (NSObject *)object forMyKey:(NSString *)key;
+- (id) objectForMyKey:(NSString *)key;
 
 
 

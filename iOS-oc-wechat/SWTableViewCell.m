@@ -13,6 +13,9 @@
 // tableview 通过分配内存获取 isCellFromCreated = YES, reused isCellFromCreated = NO， 内部使用，请不要对该属性赋值
 @property (nonatomic, readwrite,assign) BOOL isCellFromCreated;
 
+// 存放自定义视图空间 格式 {key: value}
+@property (nonatomic, strong) NSMutableDictionary *mDic;
+
 @end
 
 @implementation SWTableViewCell
@@ -64,5 +67,14 @@
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)onlyOnceBlock everyTime:(SWVoidBlock_id)everyTime{
     self.layoutSubViewEndDoBlock_onlyOnce = onlyOnceBlock;
     self.layoutSubViewEndDoBlock = everyTime;
+}
+
+#pragma mark - 对新增空间设置key
+- (void) setObject: (NSObject *)object forMyKey:(NSString *)key {
+    if (!_mDic) _mDic = [NSMutableDictionary dictionary];
+    [_mDic setObject:object forKey:key];
+}
+- (id) objectForMyKey:(NSString *)key {
+   return [_mDic objectForKey:key];
 }
 @end
