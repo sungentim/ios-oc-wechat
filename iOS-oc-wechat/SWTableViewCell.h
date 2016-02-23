@@ -11,8 +11,12 @@
 @interface SWTableViewCell : UITableViewCell
 typedef void (^SWVoidBlock_id)(SWTableViewCell *tableCell);
 
-@property (nonatomic,assign) SWVoidBlock_id layoutSubViewEndDoBlock_onlyOnce;
-@property (nonatomic,assign) SWVoidBlock_id layoutSubViewEndDoBlock;
+//默认先执行 layoutSubViewEndDoBlock_onlyOnce
+//如果为 YES: 则先执行 layoutSubViewEndDoBlock， 再执行 layoutSubViewEndDoBlock_onlyOnce
+@property (nonatomic, assign) BOOL i_isDependentEveryTimeBlock;
+
+@property (nonatomic, assign) SWVoidBlock_id layoutSubViewEndDoBlock_onlyOnce;
+@property (nonatomic, assign) SWVoidBlock_id layoutSubViewEndDoBlock;
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)block;
 - (void)i_layoutSubViewsEndDo:(SWVoidBlock_id)block;
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)onlyOnceBlock everyTime:(SWVoidBlock_id)everyTime;

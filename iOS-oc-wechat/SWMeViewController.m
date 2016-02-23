@@ -58,16 +58,12 @@
     SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:indexPath.section == 0 ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
     
     if(indexPath.section == 0){
-//        cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
+        cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
         cell.textLabel.text = @"咫尺天涯";
         cell.detailTextLabel.text = @"微信号:wangsen578595193";
         [cell i_layoutSubViewsEndDo_onlyOnce:^(SWTableViewCell *tableCell) {
-//            tableCell.imageView.x = 10;
-//            tableCell.imageView.y = 7;
-//            tableCell.imageView.height = tableCell.height - 2 * tableCell.imageView.y;
-//            tableCell.imageView.width = tableCell.imageView.height;
-            tableCell.imageView.image = [UIImage i_imageFromColor:[UIColor redColor] size:CGSizeMake(44.0f, 44.0f)];
-            [tableCell.imageView setContentMode:UIViewContentModeScaleAspectFill];
+            tableCell.i_isDependentEveryTimeBlock = YES;
+            
             [tableCell.imageView setBorderRadius:5.0f];
             
             tableCell.textLabel.x = 2 * tableCell.imageView.x + tableCell.imageView.width;
@@ -80,7 +76,8 @@
             qrCode.image = [UIImage imageNamed:@"MyQRCode"];
             [tableCell.contentView addSubview:qrCode];
         } everyTime:^(SWTableViewCell *tableCell) {
-            tableCell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
+            tableCell.imageView.bounds = CGRectMake(0, 0, 44.0f, 44.0f);
+            tableCell.imageView.x = 10;
         }];
     }else{
         switch (indexPath.section) {

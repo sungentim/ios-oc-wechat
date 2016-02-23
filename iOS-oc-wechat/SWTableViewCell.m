@@ -9,14 +9,21 @@
 #import "SWTableViewCell.h"
 #import "UITableViewCell+SWCategory.h"
 
+@interface SWTableViewCell()
+// tableview 通过分配内存获取 isCellFromCreated = YES, reused isCellFromCreated = NO， 内部使用，请不要对该属性赋值
+@property (nonatomic, readwrite,assign) BOOL isCellFromCreated;
+
+@end
+
 @implementation SWTableViewCell
-{
-    BOOL _is_first_run_layoutSubViewEndDoBlock_onlyOnce;
-}
+
 + (instancetype)cellGetWithTableView: (UITableView *)tableView Style:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier{
    SWTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell){
         cell = [[SWTableViewCell alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
+        cell.isCellFromCreated = YES;
+    }else{
+        cell.isCellFromCreated = NO;
     }
     return cell;
 }
@@ -24,14 +31,26 @@
 - (void) layoutSubviews
 {
     [super layoutSubviews];
-    if (self.layoutSubViewEndDoBlock_onlyOnce && !_is_first_run_layoutSubViewEndDoBlock_onlyOnce){
+    if(_i_isDependentEveryTimeBlock){
+        if (self.layoutSubViewEndDoBlock) {
+            self.layoutSubViewEndDoBlock(self);
+        }
+    }
+    
+    if (self.layoutSubViewEndDoBlock_onlyOnce && self.isCellFromCreated){
         self.layoutSubViewEndDoBlock_onlyOnce(self);
+    }else{
         self.layoutSubViewEndDoBlock_onlyOnce = nil;
-        _is_first_run_layoutSubViewEndDoBlock_onlyOnce = YES;
     }
-    if (self.layoutSubViewEndDoBlock) {
-        self.layoutSubViewEndDoBlock(self);
+    
+    if(!_i_isDependentEveryTimeBlock){
+        if (self.layoutSubViewEndDoBlock) {
+            self.layoutSubViewEndDoBlock(self);
+        }
     }
+    
+    
+    
 }
 
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)block
