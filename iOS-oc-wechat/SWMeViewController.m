@@ -69,7 +69,7 @@
             [tableCell.contentView addSubview:qrCode];
             [tableCell setObject:qrCode forMyKey:@"what"];
         } everyTime:^(SWTableViewCell *tableCell) {
-            tableCell.imageView.bounds = CGRectMake(0, 0, 44.0f, 44.0f);
+            tableCell.imageView.bounds = CGRectMake(0, 0, 50.0f, 50.0f);
             tableCell.imageView.x = 15;
             
             tableCell.textLabel.x = 2 * tableCell.imageView.x + tableCell.imageView.width;
