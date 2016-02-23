@@ -8,9 +8,10 @@
 
 #import "SWTableViewCell.h"
 #import "UITableViewCell+SWCategory.h"
+
 @implementation SWTableViewCell
 {
-    BOOL _is_layout_subviews_only_once_has_run;
+    BOOL _is_first_run_layoutSubViewEndDoBlock_onlyOnce;
 }
 + (instancetype)cellGetWithTableView: (UITableView *)tableView Style:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier{
    SWTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
@@ -23,24 +24,18 @@
 - (void) layoutSubviews
 {
     [super layoutSubviews];
-    
-    if (self.layoutSubViewEndDoBlock_onlyOnce && !_is_layout_subviews_only_once_has_run){
+    if (self.layoutSubViewEndDoBlock_onlyOnce && !_is_first_run_layoutSubViewEndDoBlock_onlyOnce){
         self.layoutSubViewEndDoBlock_onlyOnce(self);
+        self.layoutSubViewEndDoBlock_onlyOnce = nil;
+        _is_first_run_layoutSubViewEndDoBlock_onlyOnce = YES;
     }
     if (self.layoutSubViewEndDoBlock) {
         self.layoutSubViewEndDoBlock(self);
     }
-    
 }
 
 - (void)i_layoutSubViewsEndDo_onlyOnce:(SWVoidBlock_id)block
 {
-    if (_is_layout_subviews_only_once_has_run) {
-        self.layoutSubViewEndDoBlock_onlyOnce = nil;
-        return;
-    }
-    
-    _is_layout_subviews_only_once_has_run = YES;
     self.layoutSubViewEndDoBlock_onlyOnce = block;
 }
 - (void)i_layoutSubViewsEndDo:(SWVoidBlock_id)block

@@ -11,5 +11,6 @@
 @interface UIImage (SWCategory)
 
 + (UIImage *)i_imageFromColor:(UIColor *)color;
++ (UIImage *)i_imageFromColor:(UIColor *)color size:(CGSize)size;
 
 @end

@@ -11,7 +11,11 @@
 @implementation UIImage (SWCategory)
 
 + (UIImage *)i_imageFromColor:(UIColor *)color{
-    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    return [self i_imageFromColor:color size:CGSizeMake(1.0f, 1.0f)];
+}
+
++ (UIImage *)i_imageFromColor:(UIColor *)color size:(CGSize)size {
+    CGRect rect=CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [color CGColor]);

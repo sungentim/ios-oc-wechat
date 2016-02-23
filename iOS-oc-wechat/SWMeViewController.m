@@ -55,18 +55,19 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
+    SWTableViewCell *cell = [SWTableViewCell cellGetWithTableView:tableView Style:indexPath.section == 0 ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault reuseIdentifier:@[@"header", @"tools", @"face", @"setting"][indexPath.section]];
     
     if(indexPath.section == 0){
-        cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
+//        cell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
         cell.textLabel.text = @"咫尺天涯";
         cell.detailTextLabel.text = @"微信号:wangsen578595193";
-//        cell.i_laSWTableViewCell
         [cell i_layoutSubViewsEndDo_onlyOnce:^(SWTableViewCell *tableCell) {
-            tableCell.imageView.x = 10;
-            tableCell.imageView.y = 7;
-            tableCell.imageView.height = tableCell.height - 2 * tableCell.imageView.y;
-            tableCell.imageView.width = tableCell.imageView.height;
+//            tableCell.imageView.x = 10;
+//            tableCell.imageView.y = 7;
+//            tableCell.imageView.height = tableCell.height - 2 * tableCell.imageView.y;
+//            tableCell.imageView.width = tableCell.imageView.height;
+            tableCell.imageView.image = [UIImage i_imageFromColor:[UIColor redColor] size:CGSizeMake(44.0f, 44.0f)];
+            [tableCell.imageView setContentMode:UIViewContentModeScaleAspectFill];
             [tableCell.imageView setBorderRadius:5.0f];
             
             tableCell.textLabel.x = 2 * tableCell.imageView.x + tableCell.imageView.width;
@@ -78,6 +79,8 @@
             UIImageView *qrCode = [[UIImageView alloc] initWithFrame:CGRectMake(tableCell.width - 50, 25, 16, 16)];
             qrCode.image = [UIImage imageNamed:@"MyQRCode"];
             [tableCell.contentView addSubview:qrCode];
+        } everyTime:^(SWTableViewCell *tableCell) {
+            tableCell.imageView.image = [UIImage imageNamed:@"MyHeader.jpg"];
         }];
     }else{
         switch (indexPath.section) {
